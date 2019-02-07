@@ -1,9 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+File        : activity_forecast.xml
+Program     : A1
+Programmer  : Lucas Roes
+Created     : February 2019
+-->
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".Forecast">
+
+    <FrameLayout
+        android:id="@+id/BackButton"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <Button
+            android:id="@+id/Button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="GoToChooseCity"
+            android:text="Go Back" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/InfoFrame"
+        android:layout_width="390dp"
+        android:layout_height="311dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/BackButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Condition"
+                android:layout_width="match_parent"
+                android:layout_height="97dp"
+                android:text="Sunny"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@android:color/background_light"
+                android:textColorLink="@android:color/background_light"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Temperature"
+                android:layout_width="match_parent"
+                android:layout_height="97dp"
+                android:text="-3 Celcius"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CityName"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:text="Kitchener"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginRight="86dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/InfoFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
 
 </android.support.constraint.ConstraintLayout>

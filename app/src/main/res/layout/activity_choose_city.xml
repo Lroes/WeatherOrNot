@@ -1,9 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+File        : activity_choose_city.xml
+Program     : A1
+Programmer  : Lucas Roes
+Created     : February 2019
+-->
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_light"
     tools:context=".ChooseCityActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/colorAccent"
+            android:padding="10dp"
+            android:text="Choose a City"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/Kitchener"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="101dp"
+                    android:onClick="GoToWeather"
+                    android:text="Kitchener"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/Toronto"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="101dp"
+                    android:onClick="GoToWeather"
+                    android:text="Toronto"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/Nashville"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="101dp"
+                    android:onClick="GoToWeather"
+                    android:text="Nashville"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/Paris"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="101dp"
+                    android:onClick="GoToWeather"
+                    android:text="Paris"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/Havana"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="101dp"
+                    android:onClick="GoToWeather"
+                    android:text="Havana"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="101dp"
+                    android:background="@color/colorAccent"
+                    android:onClick="GoToMain"
+                    app:srcCompat="@android:drawable/ic_media_rew" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
